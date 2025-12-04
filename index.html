@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">JS LabWork</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="excel.html">Excel Tools</a></li>
+        </ul>
+        <button id="theme-btn" onclick="toggleTheme()">🌙 Night Mode</button>
+    </nav>
+
+    <div class="main-container">
+        <div class="card form-card">
+            <header class="card-header">
+                <h2>🚀 New Membership</h2>
+                <p>Join our premium community today</p>
+            </header>
+            
+            <form id="main-form" onsubmit="return userForm()">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" id="fname" placeholder="e.g. Ekasjot" required>
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" id="lname" placeholder="e.g. Singh" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="vineet@example.com" required>
+                </div>
+                
+                <div class="row">
+                    <div class="input-group half">
+                        <label>Address</label>
+                        <input type="text" id="address" required>
+                    </div>
+                    <div class="input-group half">
+                        <label>City</label>
+                        <input type="text" id="city" required>
+                    </div>
+                </div>
+                 <div class="input-group">
+                    <label>Province</label>
+                    <input type="text" id="province" required>
+                </div>
+
+                <div class="membership-section">
+                    <p>Select Tier:</p>
+                    <div class="radio-group">
+                        <label class="radio-box">
+                            <input type="radio" name="membership" value="Premium" checked>
+                            <span>💎 Premium</span>
+                        </label>
+                        <label class="radio-box">
+                            <input type="radio" name="membership" value="Standard">
+                            <span>⭐ Standard</span>
+                        </label>
+                        <label class="radio-box">
+                            <input type="radio" name="membership" value="Basic">
+                            <span>🔹 Basic</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <button type="submit" class="btn primary">Register User</button>
+                    <button type="reset" class="btn secondary">Clear Form</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="output" class="card result-card" style="display:none;"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 | Designed for ILAC & EFREI Assignment</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

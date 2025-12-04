@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">JS LabWork</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="excel.html" class="active">Excel Tools</a></li>
+        </ul>
+        <button id="theme-btn" onclick="toggleTheme()">🌙 Night Mode</button>
+    </nav>
+
+    <div class="main-container">
+        <div class="card excel-card">
+            <header class="card-header">
+                <h2>📊 Statistical Calculator</h2>
+                <p>Enter your dataset below to analyze</p>
+            </header>
+
+            <form id="excel-form">
+                <div class="input-group">
+                    <label for="numbers">Data Set (Space Separated)</label>
+                    <input type="text" id="numbers" placeholder="Example: 10 25 50 100" autocomplete="off">
+                </div>
+
+                <div class="function-selector">
+                    <label class="fun-option">
+                        <input type="radio" name="excel" id="sum" checked>
+                        <span class="btn-visual">AutoSum</span>
+                    </label>
+                    <label class="fun-option">
+                        <input type="radio" name="excel" id="avg">
+                        <span class="btn-visual">Average</span>
+                    </label>
+                    <label class="fun-option">
+                        <input type="radio" name="excel" id="max">
+                        <span class="btn-visual">Max</span>
+                    </label>
+                    <label class="fun-option">
+                        <input type="radio" name="excel" id="min">
+                        <span class="btn-visual">Min</span>
+                    </label>
+                </div>
+
+                <button type="button" onclick="myExcelFuns()" class="btn primary full-width">Calculate Result</button>
+            </form>
+
+            <div id="excel-output" class="result-display">
+                Waiting for input...
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 | Designed for ILAC & EFREI Assignment</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
